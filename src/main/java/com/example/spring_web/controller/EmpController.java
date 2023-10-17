@@ -4,7 +4,11 @@ import com.example.spring_web.pojo.Emp;
 import com.example.spring_web.pojo.Result;
 import com.example.spring_web.service.EmpService;
 import com.example.spring_web.service.impl.EmpServiceA;
+<<<<<<< HEAD
 import com.example.spring_web.utils.XmlParserUtils;
+=======
+import org.springframework.beans.factory.annotation.Autowired;
+>>>>>>> fb78527 (test)
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,12 +16,21 @@ import java.util.List;
 
 @RestController
 public class EmpController {
+<<<<<<< HEAD
     private EmpService empservice = new EmpServiceA();
+=======
+    @Autowired
+    private EmpService empservice;
+>>>>>>> fb78527 (test)
 
     @RequestMapping("/listEmp")
     public Result list(){
 
         List<Emp> empList = empservice.listEmp();
+<<<<<<< HEAD
+=======
+
+>>>>>>> fb78527 (test)
         return Result.success(empList);
 
     }
