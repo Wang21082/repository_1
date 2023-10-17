@@ -4,11 +4,14 @@ import com.example.spring_web.dao.EmpDao;
 import com.example.spring_web.dao.impl.EmpDaoA;
 import com.example.spring_web.pojo.Emp;
 import com.example.spring_web.service.EmpService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
-
+@Component
 public class EmpServiceA implements EmpService {
-    private EmpDao empdao = new EmpDaoA();
+    @Autowired
+    private EmpDao empdao;
 
 
     @Override
